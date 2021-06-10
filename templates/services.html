@@ -1,0 +1,175 @@
+{%extends '_base.html'%} {%block title%} What We Do {%endblock title%}
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> {%block main%}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="card bg-dark m-4">
+            <div class="card-body m-3">
+                <h1 class="card-title text-white"> Our Impact</h1>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="card-group">
+        <div class="card order-0" style="max-width:33%">
+            <video width="420" height="440" class="card-img" alt="..." controls>
+              <source src="movie.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+        <div class="card border-light order-1">
+            <div class="card-body">
+                <h5 class="card-title">Inensive Support</h5>
+                <p class="card-text">
+                    And lastly this, the third column of representative placeholder content
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <hr class="featurette-divider">
+
+    <div class="card-group">
+        <div class="card order-1" style="max-width:33%">
+            <video width="420" height="440" class="card-img" alt="..." controls>
+              <source src="movie.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+        <div class="card border-light order-0">
+            <div class="card-body">
+                <h5 class="card-title">Life Long Learning</h5>
+                <p class="card-text">
+                    And lastly this, the third column of representative placeholder content
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="card position-relative">
+        <div class="card-header text-center">
+            <h3>Our Life Long learning classes</h3>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>A well-known quote, contained in a blockquote element.</p>
+                <footer class="blockquote-footer"> Quote <cite title="Source Title">Author</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="computerbeans-tab" data-bs-toggle="tab" data-bs-target="#computerbeans" type="button" role="tab" aria-controls="computerbeans" aria-selected="true">Computer Beans</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="artybeans-tab" data-bs-toggle="tab" data-bs-target="#artybeans" type="button" role="tab" aria-controls="profileartybeans" aria-selected="false">Arty Beans</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="healthybeans-tab" data-bs-toggle="tab" data-bs-target="#healthybeans" type="button" role="tab" aria-controls="healthybeans" aria-selected="false">Health Beans</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="foodybeans-tab" data-bs-toggle="tab" data-bs-target="#foodybeans" type="button" role="tab" aria-controls="foodybeans" aria-selected="false">Foody Beans</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="writingbeans-tab" data-bs-toggle="tab" data-bs-target="#writingbeans" type="button" role="tab" aria-controls="writingbeans" aria-selected="false">Writing Beans</button>
+        </li>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="computerbeans" role="tabpanel" aria-labelledby="computerbeans-tab">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" fi class="d-inline-block align-top">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">{{}}</p>
+                            <p class="card-text"><small class="text-muted">{{Last updated 3 mins ago}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="artybeans" role="tabpanel" aria-labelledby="artybeans-tab">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" width="200" height="200" class="d-inline-block align-top">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">{{}}</p>
+                            <p class="card-text"><small class="text-muted">{{Last updated 3 mins ago}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="healthybeans" role="tabpanel" aria-labelledby="healthybeans-tab">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" width="200" height="200" class="d-inline-block align-top">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">{{}}</p>
+                            <p class="card-text"><small class="text-muted">{{Last updated 3 mins ago}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="foodybeans" role="tabpanel" aria-labelledby="foodybeans-tab">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" width="200" height="200" class="d-inline-block align-top">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">{{}}</p>
+                            <p class="card-text"><small class="text-muted">{{Last updated 3 mins ago}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="writingbeans" role="tabpanel" aria-labelledby="writingbeans-tab">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" width="200" height="200" class="d-inline-block align-top">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">{{}}</p>
+                            <p class="card-text"><small class="text-muted">{{Last updated 3 mins ago}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {%endblock main%}
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

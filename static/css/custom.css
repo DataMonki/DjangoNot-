@@ -1,0 +1,306 @@
+.rainbow-text {
+    background-image: linear-gradient(to left, black, rgba(23, 194, 23, 0.794), rgb(7, 73, 7));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/*font family styling*/
+
+#font-style {
+    font-family: comic;
+    font-weight: bold;
+}
+
+#font-styleA {
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    /* font-size: 700; */
+}
+
+#font-styleB {
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    /* font-size: 700; */
+}
+
+.nav-item .nav-link {
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.contact {
+    font-weight: 900;
+    font-size: large;
+}
+
+#brand {
+    font-size: x-large;
+    color: rgb(5, 5, 5);
+}
+
+footer.container-fluid {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    background-color: rgb(255, 48, 25); // Old browsers
+    @include filter-gradient(#ff3019, #cf0404, vertical);
+    .box2 {
+        width: 120px;
+        min-height: 120px;
+        max-height: auto;
+        float: left;
+        margin: 3px;
+        padding: 3px;
+    }
+}
+
+.card-img-top {
+    max-width: 286px;
+    min-width: 286px;
+    max-height: 250px;
+    min-height: 250px;
+}
+
+section>p.text-center {
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(5, 5, 5);
+}
+
+section>h2.text-center {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(5, 5, 5);
+    ;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#social-_1 {
+    font-size: 60px;
+    color: #dc3545;
+}
+
+#social-1 {
+    font-size: 60px;
+    color: #ff3019;
+    /* background-color: #f5f5f5; // Old browsers
+    @include filter-gradient(#ff3019, #cf0404, vertical); */
+}
+
+#social-2 {
+    font-size: 60px;
+    color: #f5f5f5;
+    background-color: #ff3019; // Old browsers
+    @include filter-gradient(#ff3019, #cf0404, vertical);
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+address,
+#tel,
+#email {
+    font-size: 19px;
+    color: #000000;
+    text-decoration: none;
+}
+
+#annuals {
+    font-size: 19px;
+    color: #183a1d;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.circle-avatar {
+    /*<img class="img-responsive circle-avatar" src="http://placekitten.com/g/200/200" />*/
+    border-radius: 50%;
+    width: 250px;
+    height: auto;
+    max-height: 250px;
+    max-width: 400px;
+}
+
+#referral {
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.btn-success {
+    background-color: rgb(41, 154, 11)!important; // Old browsers
+    @include filter-gradient(#299a0b, #299a0b, vertical)
+}
+
+.alert {
+    height: 184px;
+}
+
+
+/* Icons */
+
+.box1 {
+    background-color: rgb(245, 245, 245); // Old browsers
+    @include filter-gradient(#ff3019, #cf0404, vertical);
+}
+
+.text-typing {
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(22, end) forwards, blink 1s;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        border-right: 2px solid transparent;
+    }
+    50% {
+        border-right: 2px solid #222;
+    }
+}
+
+
+/**
+   * The "logo shine" base setttings
+   */
+
+.logo {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 25px 0 25px 25px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+
+/**
+   * The "shine" element
+   */
+
+.logo:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 150%;
+    height: 150%;
+    width: 100px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);
+    -webkit-animation: 2s myani linear infinite;
+    animation: 2s myani linear infinite;
+}
+
+@-webkit-keyframes myani {
+    0% {
+        top: 100%;
+        left: 150%;
+    }
+    100% {
+        top: -150%;
+        left: -150%;
+    }
+}
+
+@keyframes myani {
+    0% {
+        top: 100%;
+        left: 150%;
+    }
+    100% {
+        top: -150%;
+        left: -150%;
+    }
+}
+
+.logo:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient( to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);
+}
+
+
+/* Hover state - trigger effect */
+
+.logo:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+
+/* Active state */
+
+.logo:active:after {
+    opacity: 0;
+}
+
+
+/* Calender */
+
+@media (max-width:575px) {
+    .display-4 {
+        font-size: 1.5rem;
+    }
+    .day h5 {
+        background-color: #f8f9fa;
+        padding: 3px 5px 5px;
+        margin: -8px -8px 8px -8px;
+    }
+    .date {
+        padding-left: 4px;
+    }
+}
+
+@media (min-width: 576px) {
+    .day {
+        height: 14.2857vw;
+    }
+}

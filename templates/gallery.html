@@ -1,0 +1,76 @@
+{%extends '_base.html'%}
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<!-- Bootstrap & Custom CSS -->
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/custom.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/all.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/brands.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/solid.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!-- Favicon For Borwser Tab-->
+<link rel="icon" href="/home/chukwuka/DjangoNot/static/images/favicon.png">
+
+<title>Gallery</title>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card bg-dark m-4">
+                <div class="card-body m-3">
+                    <h1 class="card-title text-white">Baked Bean Charity Gallery</h1>
+                </div>
+            </div>
+        </div>
+        <!-- I'll use row/column designs here because I'm lazzy and I think it'll work better than messing with Grid stuff. That said, this is probably do-able with grid tools, so... Bear that in mind -->
+
+        <div class="container row align-content-center">
+            <div class="col-md-12">
+                <!-- Gallery -->
+                <div class="row">
+                    <!-- {%for i in object%} {%if (i.id %2) = 0 %} -->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="w-100 h-30 shadow-1-strong rounded mb-4" alt="" />
+
+                        <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="w-100 h-70 shadow-1-strong rounded mb-4" alt="" />
+                    </div>
+                    <!-- {% else%} -->
+
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                    </div>
+                    <!-- {%endif%} {%endfor%} -->
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" class="w-100 h-30 shadow-1-strong rounded mb-4" alt="" />
+
+                        <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="w-100 h-70 shadow-1-strong rounded mb-4" alt="" />
+                    </div>
+                </div>
+                <!-- Gallery -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container m-4 d-flex justify-content-around">
+            <p>
+
+            </p>
+            <a href="#" class="btn btn-outline-primary rounded-pill">
+            Back To The Top
+          </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    </div>
+
+</body>
+
+</html>
