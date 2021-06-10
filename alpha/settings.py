@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #applications
-    'articles'
+    'articles',
 
     #3rd party apps
     'django_summernote',

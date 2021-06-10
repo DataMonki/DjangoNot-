@@ -1,17 +1,19 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c8b6dacd807f5904c0435933ddc1cff533b33b5d62fec94befda2caf2f71fcc7"
+            "sha256": "9af83e0fd712e340ccb1fdc360bf73a55bbaf6bcd54b31824afa913167825a7c"
         },
         "pipfile-spec": 6,
         "requires": {
             "python_version": "3.9"
         },
-        "sources": [{
-            "name": "pypi",
-            "url": "https://pypi.org/simple",
-            "verify_ssl": true
-        }]
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
     },
     "default": {
         "asgiref": {
@@ -83,6 +85,13 @@
             ],
             "index": "pypi",
             "version": "==0.4.5"
+        },
+        "django-summernote": {
+            "hashes": [
+                "sha256:c23dae35c287f0d3d1ff801654ace77c3c6836453162e87c7330710d74d2eb88"
+            ],
+            "index": "pypi",
+            "version": "==0.8.11.6"
         },
         "gunicorn": {
             "hashes": [
