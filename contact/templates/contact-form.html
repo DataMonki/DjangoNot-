@@ -1,0 +1,141 @@
+{%extends '_base.html'%}
+<!-- Bootstrap & Custom CSS -->
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/custom.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/all.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/brands.css">
+<link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/solid.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!-- Favicon For Borwser Tab-->
+<link rel="icon" href="/home/chukwuka/DjangoNot/static/images/favicon.png"> {%block main%}
+<section class="container">
+    <div class="card bg-dark m-4">
+        <div class="card-body m-3">
+            <h1 class="card-title text-white">Contact Us</h1>
+            <p class="card-text text-white">
+            </p>
+        </div>
+    </div>
+    <header>
+        <section class="row row-cols-md-3 ">
+            <div class="col">
+                <div class="row d-flex ">
+                    <div class="contact mt-4 col d-flex justify-content-center">
+                        Message Us
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+
+                        <form class="col p-4" method="post">{% csrf_token %} {{form.as_p|crispy}}
+                            <button type="button" class="btn btn-secondary">
+                                Send
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            <div class="col">
+                <div class="row d-flex ">
+                    <div class="contact mt-4 col d-flex justify-content-center">
+                        Office Hours
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <div class="col p-5 d-flex justify-content-center">
+                            <div class="card mb-3" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="row row-cols-sm-1">
+                                        <blockquote class=" col card-subtitle mb-0 text-muted">
+                                            <p>Opening Hours</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="row row-cols-sm-2">
+                                        <div class="col">
+                                            <p class="card-text">Monday Tuesday Wednesday Thursday &nbsp Friday &nbsp Saturday Sunday</p>
+                                        </div>
+                                        <div class="col">
+                                            <p class="card-text">9:30am &nbsp-&nbsp 5pm 9:30am &nbsp-&nbsp 5pm 9:30am &nbsp-&nbsp 5pm 9:30am &nbsp-&nbsp 5pm 9:30am &nbsp-&nbsp 5pm Closed &nbsp &nbsp Closed </p>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-sm-1 pt-3">
+                                        <blockquote class=" col card-subtitle mb-2 text-muted">
+                                            <p>
+                                                <a href="tel:02080048320">
+                                                    <i class="fas fa-phone-alt">
+                                                            Call Us:&nbsp 020 8004 8320
+                                                            </i>
+                                                </a>
+                                            </p>
+                                            <a href="https://goo.gl/maps/mhmNiYosR72GvDnF9">
+                                                <!--to be adjusted in time!-->
+                                                <p>
+                                                    <i class="fas fa-map-marker-alt">
+                                                                Baked Bean Charity,
+                                                            <br>&nbsp &nbsp 89 Bickersteth Road, 
+                                                            <br>&nbsp &nbsp London,
+                                                            <br>&nbsp &nbsp SW17 9SH
+                                                            </i>
+                                                </p>
+                                            </a>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="row d-flex ">
+                    <div class="contact mt-4 col d-flex justify-content-center">
+                        Social Media
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col p-5 d-flex justify-content-center mb-5 mb-5">
+                        <div>
+                            <section id="social-1" class="bg-white d-flex justify-content-sm-center justify-content-md-end m-0">
+
+                                <a href="https://www.facebook.com/bakedbeancharity/" class="no-underline">
+                                    <i class="fab fa-facebook-square p-2"></i>
+                                </a>
+
+                                <a href="https://twitter.com/BakedCharity" class="no-underline">
+                                    <i class="fab fa-twitter-square p-2"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/baked-bean-charity-261243209/" class="no-underline">
+                                    <i class="fab fa-linkedin  p-2"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/BakedBeanCharity/" class="no-underline">
+                                    <i class="fab fa-instagram-square  p-2"></i>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCzKLTFDZnfWmf61TF-OTipA" class="no-underline">
+                                    <i class="fab fa-youtube-square  p-2"></i>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</section>
+{%endblock main%}
+<!-- Font Awesome Script -->
+<script src="/home/chukwuka/DjangoNot/static/fontawesome/js/brands.js"></script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="/home/chukwuka/DjangoNot/static/js/bootstrap.bundle.min.js"></script>

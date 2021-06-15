@@ -19,9 +19,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    #site admin
     path('admin/', admin.site.urls),
+
+    #backend 3pty apps
     path('summernote/', include('django_summernote.urls')),
-    path('blog/', include('articles.urls',namespace='articles'))
+
+    #site apps
+    #path('', include('articles.urls',namespace='pages')),
+    path('blog/', include('articles.urls',namespace='articles')),
+    path('contact/', include('articles.urls',namespace='contact')),
+
 ]
 
 if settings.DEBUG:

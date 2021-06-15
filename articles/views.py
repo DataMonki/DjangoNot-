@@ -1,21 +1,12 @@
-from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, UpdateView
+from django.urls import reverse
 from django.utils import timezone
 from django.db.models import F
 from .models import Articles
 
 
-class HomePageView(TemplateView):
-
-    template_name = "index.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['latest_articles'] = Articles.objects.all()[:3]
-        #href = "{% url 'articles:article-detail' slug=latest_articles.slug%}"
-        #the above will reference the 
-        return context
 
 class ArticleDetailView(DetailView):
      
@@ -47,10 +38,21 @@ class ArticleListView(ListView):
     
 class GenreListView(ListView):
     model = Articles
-    context_object_name = 'article-list'
+    context_object_name = 'article_list'
     template_name='article-listview.html'
     paginate_by = 2 
 
     def get_queryset(self,*args, **kwargs):      
        return Articles.objects.filter(genre__icontains=self.kwargs.get('genre'))
+
+class ArticleCreateView(CreateView):
+    model = Articles
+    template_name_suffix = '_create_form'
+    #success_url = reverse('articles:article_detail')
+
+
+class ArticleUpdateView(UpdateView):
+    model = Articles
+    template_name_suffix = '_update_form'
+    #success_url = reverse('articles:article_detail')
     
