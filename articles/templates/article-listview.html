@@ -13,7 +13,6 @@
 
 <!-- Favicon For Borwser Tab-->
 <link rel="icon" href="/home/chukwuka/DjangoNot/static/images/favicon.png">
-
 <title>Bootstrap 5 Blog Template</title>
 </head>
 
@@ -24,52 +23,31 @@
 
         <div class="card bg-dark m-4">
             <div class="card-body m-3">
-                <h1 class="card-title text-white">Baked Bean Charity Article</h1>
-                <p class="card-text text-white">
-
-                </p>
+                <h1 class="card-title text-white">Baked Bean Charity Articles</h1>
             </div>
         </div>
 
         <!-- I'll use row/column designs here because I'm lazzy and I think it'll work better than messing with Grid stuff. That said, this is probably do-able with grid tools, so... Bear that in mind -->
 
-        <div class="row">
-
-            <div class="col m-2">
-
-
-
+        <div class="container row">
+            {% for article in article-list %}
+            <div class="col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/150x100" width="200" height="200" class="card-img-top" alt="Just a placeholder image, 100x50">
+                    <div class="card-body">
+                        <h5 class="card-title">{{article.title}}</h5>
+                        <p class="card-text">{{snippet}}.</p>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="btn-group">
+                                <a href="{% url 'articles:article-detail' slug=article.slug %}" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
+                            </div>
+                            <small class="text-muted">{{article.date}}</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <h2> {{.title}} </h2>
-                <hr>
-
-                <!--I'll use this section to define what a blog post looks like, and wrap it in div tags to deliniate it nicely-->
-                <article class="blog-post">
-
-                    <small class="text-muted">
-                    {{.date}}
-                  </small>
-                    <br>
-                    <br>
-                    <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" width="200" height="200" class="d-inline-block align-top">
-                    <br>
-                    <br> {{.content}}
-                </article>
-                <br>
-                <br>
-
-                <button type="button" class="btn rounded-pill btn-outline-primary" disabled>
-                  previous
-                </button>
-                <button type="button" class="btn rounded-pill btn-outline-secondary" disabled>
-                  Next
-                  </button>
-            </div>
-
+            {%endfor%}
             <div class="col">
                 <div class="container sticky-top">
                     <div class="card">
@@ -132,6 +110,22 @@
         </div>
 
         <footer>
+            <div class="btn-group">
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        {% endif %}
+                
+                        <span class="current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span> {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a> {% endif %}
+                    </span>
+                </div>
+            </div>
             <div class="container m-4 d-flex justify-content-around">
                 <p>
 
