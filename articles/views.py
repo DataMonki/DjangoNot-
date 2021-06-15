@@ -51,6 +51,6 @@ class GenreListView(ListView):
     template_name='article-listview.html'
     paginate_by = 2 
 
-    def get_queryset(self,*args, **kwargs):
+    def get_queryset(self,*args, **kwargs):      
        return Articles.objects.filter(genre__icontains=self.kwargs.get('genre'))
     
