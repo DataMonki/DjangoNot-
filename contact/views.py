@@ -5,9 +5,9 @@ from django.urls import reverse
 
 
 class ContactFromView(FormView):
-    template_name = 'contact-form.html'
+    template_name = 'contact_form.html'
     form_class = ContactForm
-    success_url = reverse('contact')
+    #success_url = reverse('contact')
 
     def form_valid(self, form):
         form.save()

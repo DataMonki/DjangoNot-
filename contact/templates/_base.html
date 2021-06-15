@@ -9,19 +9,21 @@
     <meta charset='utf-8'>
     <meta name="author" content="Chukwuka Orefo">
     <meta name="description">
-    <meta name="keywords" content="Charity,Learning,Education,Schools"> /home/chukwuka/DjangoNot/css
+    <meta name="keywords" content="Charity,Learning,Education,Schools">
     <!-- Bootstrap & Custom CSS -->
-    <link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/custom.css">
-    <link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/all.css">
-    <link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/brands.css">
-    <link rel="stylesheet" href="/home/chukwuka/DjangoNot/static/css/solid.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/brands.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/solid.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome_free/css/all.min.css' %}">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
 
     <!-- Favicon For Borwser Tab-->
-    <link rel="icon" href="/home/chukwuka/DjangoNot/static/images/favicon.png">
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
 
     <title>Baked Bean Charity</title>
 </head>
@@ -37,7 +39,7 @@
                         <section class="row row-cols-2 justify-content-sm-center">
                             <div class="col d-flex justify-content-sm-center justify-content-md-start">
                                 <a class="logo navbar-brand pe-5 pb-0" href="#">
-                                    <img src="/home/chukwuka/DjangoNot/static/images/favicon.png" alt="" width="200" height="200" class="d-inline-block align-top">
+                                    <img src="{% static 'images/favicon.png' %}" alt="" width="200" height="200" class="d-inline-block align-top">
                                 </a>
                             </div>
 
@@ -85,16 +87,16 @@
                         <ul class="navbar-nav mb-3 mb-lg-0 me-auto">
                             <li class="nav-item ps-3 pe-3 ">
                                 <!-- create conditional statment here to render nav-link active -->
-                                <a class="nav-link active pt-md-5" id="font-styleA" aria-current="page" href="{% url 'appName:urlName'%}">Home</a>
+                                <a class="nav-link active pt-md-5" id="font-styleA" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item dropdown ps-3 pe-3">
-                                <a class="nav-link dropdown-toggle pt-md-5" href="{% url 'appName:urlName'%}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
+                                <a class="nav-link dropdown-toggle pt-md-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
                                 <ul class="dropdown-menu ps-3 pe-3" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item " id="font-styleA" href="{% url 'appName:urlName'%}">Intensive Support</a></li>
+                                    <li><a class="dropdown-item " id="font-styleA" href="#">Intensive Support</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName'%}">Life Long Learning</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">Life Long Learning</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown ps-3 pe-3">
@@ -102,15 +104,15 @@
                                 Who We Are
                             </a>
                                 <ul class="dropdown-menu ps-3 pe-3" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName'%}">Our History</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">Our History</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName' %}">Our Mission</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">Our Mission</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName'%}">Our Team</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">Our Team</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -118,26 +120,26 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown ps-3 pe-3">
-                                <a class="nav-link dropdown-toggle pt-md-5" href="{% url 'appName:urlName'%}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle pt-md-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Our Impact
                             </a>
                                 <ul class="dropdown-menu ps-3 pe-3" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName'%}">Stories</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">Stories</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName'%}">News</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">News</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" id="font-styleA" href="{% url 'appName:urlName'%}">Campaigns</a></li>
+                                    <li><a class="dropdown-item" id="font-styleA" href="#">Campaigns</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item ps-2 pe-2">
-                                <a class="nav-link pt-lg-5" href="{% url 'appName:contact-page'%}">Contact</a>
+                                <a class="nav-link pt-lg-5" href="#">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pt-md-5 ps-3 pe-2" href="{% url 'appName:gallery-page'%}" tabindex="-1" aria-disabled="true">Gallery</a>
+                                <a class="nav-link pt-md-5 ps-3 pe-2" href="#" tabindex="-1" aria-disabled="true">Gallery</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link pt-md-5 ps-5 pt-0" href="http://bakedbeancharity.com/staff" tabindex="-1" aria-disabled="true">Staff</a>
@@ -177,22 +179,22 @@
         <section class="row row-cols-1 row-cols-sm-2 row-cols-md-4 bg-white ">
             <div class="col d-flex justify-content-center p-5">
                 <a href="http://bakedbeancompany.com">
-                    <img src="/home/chukwuka/DjangoNot/static/images/sponsor_bb_logo.png" class="img-thumbnail border-0" alt="..." width="270" height="500">
+                    <img src="{% static 'images/sponsor_bb_logo.png'%}" class="img-thumbnail border-0" alt="..." width="270" height="500">
                 </a>
             </div>
             <div class="col d-flex justify-content-center p-5">
                 <a href="https://londoncf.org.uk/">
-                    <img src="/home/chukwuka/DjangoNot/static/images/sponsor_london-community-foundation-logo.png" class="img-thumbnail border-0 pt-5" alt="..." width="200" height="50">
+                    <img src="{% static 'images/sponsor_london-community-foundation-logo.png'%}" class="img-thumbnail border-0 pt-5" alt="..." width="200" height="50">
                 </a>
             </div>
             <div class="col d-flex justify-content-center p-5">
                 <a href="biglotteryfund.org.uk">
-                    <img src="/home/chukwuka/DjangoNot/static/images/sponsor_lottery-logo.png" class="img-thumbnail border-0" alt="..." width="270" height="500">
+                    <img src="{% static 'images/sponsor_lottery-logo.png'%}" class="img-thumbnail border-0" alt="..." width="270" height="500">
                 </a>
             </div>
             <div class="col d-flex justify-content-center p-5">
                 <a href="https://www.wimbledon.com/en_GB/foundation/index.html">
-                    <img src="/home/chukwuka/DjangoNot/static/images/sponsor_wimbledon-foundation-logo.png" class="img-thumbnail border-0" alt="..." width="150" height="400">
+                    <img src="{% static 'images/sponsor_wimbledon-foundation-logo.png'%}" class="img-thumbnail border-0" alt="..." width="150" height="400">
                 </a>
             </div>
         </section>
@@ -334,10 +336,12 @@
     <!-- end of footer-->
 
     <!-- Font Awesome Script -->
-    <script src="/home/chukwuka/DjangoNot/static/fontawesome/js/brands.js"></script>
+    <!-- <script src="{% static 'fontawesome/js/brands.js' %}"></script> -->
+
+    <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="/home/chukwuka/DjangoNot/static/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 

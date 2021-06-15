@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+from django.views.decorators.clickjacking import xframe_options_sameorigin
 from pathlib import Path
 import os
 
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'crispy_bootstrap5',
+    'fontawesome_free',
     #'allauth',
     #'allauth.account',
 
@@ -164,3 +165,4 @@ MEDIA_ROOT = str(BASE_DIR/ 'media/')
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
