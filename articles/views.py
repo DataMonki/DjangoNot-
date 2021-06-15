@@ -1,6 +1,6 @@
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
-from django.view.generic.list import ListView
+from django.views.generic.list import ListView
 from django.utils import timezone
 from django.db.models import F
 from .models import Articles
