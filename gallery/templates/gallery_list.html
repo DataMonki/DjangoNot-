@@ -1,0 +1,39 @@
+{%extends '_base.html'%} {%block main%}
+<div class="container">
+    <div class="row">
+        <div class="card bg-dark m-4">
+            <div class="card-body m-3">
+                <h1 class="card-title text-white">Baked Bean Charity Gallery</h1>
+            </div>
+        </div>
+    </div>
+    <!-- I'll use row/column designs here because I'm lazzy and I think it'll work better than messing with Grid stuff. That said, this is probably do-able with grid tools, so... Bear that in mind -->
+
+    <div class="container row align-content-center">
+        <div class="col-md-12">
+            <!-- Gallery -->
+            <div class="row">
+                {%for pic in gallery%}
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <img src="{{pic.picture.url}}" class="w-100 h-30 shadow-1-strong rounded mb-4" alt="" />
+                    <img src="{{pic.picture.url}}" class="w-100 h-70 shadow-1-strong rounded mb-4" alt="" />
+                </div>
+                {%endfor%}
+
+            </div>
+            <!-- Gallery -->
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container m-4 d-flex justify-content-around">
+        <p>
+
+        </p>
+        <a href="#" class="btn btn-outline-primary rounded-pill">
+            Back To The Top
+          </a>
+    </div>
+</footer>
+{%endblock%}

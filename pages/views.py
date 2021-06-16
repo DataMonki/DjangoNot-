@@ -12,3 +12,5 @@ class HomePageView(TemplateView):
         #the above will reference the 
         return context
 
+class ServicesPageView(TemplateView):
+    template_name = 'services.html'

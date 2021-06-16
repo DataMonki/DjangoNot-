@@ -1,0 +1,14 @@
+{%extends '_base.html'%} {% block main %} {%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+<div>
+    <div class="clearfix">
+        <a class="a btn btn-info right mr-2" href="{% url 'events:calendar' %}?{{ next_month }} "> Next Month </a>
+        <a class="a btn btn-info right mr-2" href="{% url 'events:calendar' %}?{{ prev_month }}"> Previous Month </a>
+        <!-- <a class="btn btn-info right mr-2" href="{% url 'events:event_new' %}"> + New Event </a> -->
+    </div>
+    <div style="color: blueviolet;">
+        {%autoescape off %} wait {{ calendar }} {%endautoescape%}
+    </div>
+</div>
+{% endblock%}

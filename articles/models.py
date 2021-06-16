@@ -7,7 +7,7 @@ from django.template.defaultfilters import slugify
 class Articles(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(null=True)
-    img = models.ImageField( upload_to='media/articles/images', height_field=None, width_field=None, max_length=None)
+    img = models.ImageField( upload_to='articles/', height_field=None, width_field=None, max_length=None)
     genre = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     content = models.TextField(null=True,)
@@ -20,5 +20,5 @@ class Articles(models.Model):
         return super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('article-detail', kwargs={'slug': self.slug})
+        return reverse('articles:article-detail', kwargs={'slug': self.slug})
 

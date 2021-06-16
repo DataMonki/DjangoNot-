@@ -16,13 +16,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/brands.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/solid.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/pages.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'fontawesome_free/css/brands.css' %}">
     <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
     <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-
-
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
     <!-- Favicon For Borwser Tab-->
     <link rel="icon" href="{% static 'images/favicon.png' %}">
 
@@ -166,7 +165,14 @@
 
     <!-- Main  section -->
     <main>
-        {%block main %} {%endblock main%}
+        <div class="clearfix">
+            <a class="a btn btn-info right mr-2" href="{% url 'events:calendar' %}?{{ next_month }} "> Next Month </a>
+            <a class="a btn btn-info right mr-2" href="{% url 'events:calendar' %}?{{ prev_month }}"> Previous Month </a>
+            <!-- <a class="btn btn-info right mr-2" href="{% url 'events:event_new' %}"> + New Event </a> -->
+        </div>
+        <div>
+            what this space {{ calendar }} talk this way
+        </div>
     </main>
     <!-- end main-->
 

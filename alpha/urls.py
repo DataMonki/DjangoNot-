@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import signup, user_logout
 
 urlpatterns = [
     #site admin
     path('admin/', admin.site.urls),
+    path('signup/', signup, name='signup'),
+    path('logout/', user_logout, name='logout'),
 
     #backend 3pty apps
     path('summernote/', include('django_summernote.urls')),
@@ -29,6 +32,8 @@ urlpatterns = [
     path('', include('pages.urls',namespace='pages')),
     path('blog/', include('articles.urls',namespace='articles')),
     path('contact/', include('contact.urls',namespace='contact')),
+    path('calendar/', include('events.urls',namespace='events')),
+    path('gallery/', include('gallery.urls',namespace='gallery')),
 
 ]
 

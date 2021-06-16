@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'articles',
     'pages',
     'contact',
+    'events',
+    'gallery',
 
     #3rd party apps
     'django_summernote',
@@ -149,7 +151,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static','fontawesome_free/static']
+STATICFILES_DIRS = [BASE_DIR / 'static','fontawesome_free/static','events/static/css']
 STATIC_ROOT = str(BASE_DIR / 'staticfiles')
 STATICFILES_FINDERS = [
 "django.contrib.staticfiles.finders.FileSystemFinder","django.contrib.staticfiles.finders.AppDirectoriesFinder",
