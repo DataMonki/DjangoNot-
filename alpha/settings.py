@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from django.views.decorators.clickjacking import xframe_options_sameorigin
 from pathlib import Path
 import os
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +31,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+sys.modules['fontawesome_free'] = __import__('fontawesome-free')
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'fontawesome_free',
+
     #'allauth',
     #'allauth.account',
 
@@ -147,7 +149,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [str(BASE_DIR / 'static')]
+STATICFILES_DIRS = [BASE_DIR / 'static','fontawesome_free/static']
 STATIC_ROOT = str(BASE_DIR / 'staticfiles')
 STATICFILES_FINDERS = [
 "django.contrib.staticfiles.finders.FileSystemFinder","django.contrib.staticfiles.finders.AppDirectoriesFinder",

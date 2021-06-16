@@ -11,14 +11,16 @@
     <meta name="description">
     <meta name="keywords" content="Charity,Learning,Education,Schools">
     <!-- Bootstrap & Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
-    <link rel="stylesheet" href="{% static 'css/custom.css'%}">
-    <link rel="stylesheet" href="{% static 'css/all.css'%}">
-    <link rel="stylesheet" href="{% static 'css/brands.css'%}">
-    <link rel="stylesheet" href="{% static 'css/solid.css'%}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/brands.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/solid.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome_free/css/brands.css' %}">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
 
     <!-- Favicon For Borwser Tab-->
     <link rel="icon" href="{% static 'images/favicon.png' %}">
@@ -334,7 +336,9 @@
     <!-- end of footer-->
 
     <!-- Font Awesome Script -->
-    <script src="{% static 'fontawesome/js/brands.js' %}"></script>
+    <script src="{% static 'fontawesome_free/js/brands.js' %}"></script>
+
+    <!-- <script src="{% static 'fontawesome/js/all.min.js' %}"></script> -->
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
